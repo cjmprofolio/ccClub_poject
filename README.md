@@ -4,10 +4,10 @@
 I teamed up with my senior colleagues in PhD programs from graduate school I studied before. One of my team member is in Immunology PhD program. Based on his challenge on analyzing cytoskeleton of cell images generated from microscopy. Therefore, **our project aims to quantify the orientation of cytoskeleton.**
 
 ### Approach_I
-Initailly, we utilized cell images from epi microscopy cell images. Prior to proceeding the cytoskeleton processing, we would like to address the issues of the background and noises of images. We accomplished it by serial processes including correcting by subtracting fluorescence-background, stacking z-scale through scale-invariant feature transform (SIFT)[^[1]^](#1) and doing Wavelet-based background and noise subtraction (WBNS)[^[2]^](#2). 
+Initailly, we utilized cell images from epi microscopy cell images. Prior to proceeding the cytoskeleton processing, we would like to address the issues of the background and noises of images. We accomplished it by serial processes including correcting by subtracting fluorescence-background, stacking z-scale through scale-invariant feature transform (SIFT)[^[1]^](#1) and doing Wavelet-based background and noise subtraction (WBNS)[^[2]^](#2).  
 
-<br>
-```mermaid
+<br>  
+```mermaid  
 graph LR;
     A(Epi <br> fluorescence) -->|Get| B(Grayscale <br> images);
     B(Grayscale <br> images) --> C(illumination <br> correction);
@@ -17,7 +17,7 @@ graph LR;
     click D "#focus-stacking"
     click E "#background-and-noise-subtraction"  
 ```  
-<br>
+<br>  
 
 Here are the details of these steps:
 
@@ -66,7 +66,7 @@ Following the focus_stack, we use WBNS to reduce background and noise signals.
 
 ![](./static/figures/wbns.png)  
 <br>
-We proceeded to identify the cytoskeleton shape using Canny edge detection and Hough transform algorithm. But, it failed to get the specific and accurate lines.
+We proceeded to identify the cytoskeleton shape using Canny edge detection and Hough transform algorithm. But, it failed to get the specific and accurate lines.  
 <br>
 ![](./static/figures/canny_hough_1.png)
 <br>
