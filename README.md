@@ -4,7 +4,7 @@
 I teamed up with my senior colleagues in PhD programs from graduate school I studied before. One of my team member is in Immunology PhD program. Based on his challenge on analyzing cytoskeleton of cell images generated from microscopy. Therefore, **our project aims to quantify the orientation of cytoskeleton.**
 
 ### Approach_I
-Initailly, we utilized cell images from epi microscopy cell images. Prior to proceeding the cytoskeleton processing, we would like to address the issues of the background and noises of images. We accomplished it by serial processes including correcting by subtracting fluorescence-background, stacking z-scale through scale-invariant feature transform (SIFT)[^[1]^](#1) and doing Wavelet-based background and noise subtraction (WBNS)[^[2]^](#2).  
+Initailly, we utilized cell images from epi microscopy cell images. Prior to proceeding the cytoskeleton processing, we would like to address the issues of the background and noises of images. We accomplished it by serial processes including correcting by subtracting fluorescence-background, stacking z-scale through scale-invariant feature transform (SIFT)[[1]](#1) and doing Wavelet-based background and noise subtraction (WBNS)[[2]](#2).  
 
 <br>  
 ```mermaid  
@@ -12,14 +12,14 @@ graph LR;
     A(Epi <br> fluorescence) -->|Get| B(Grayscale <br> images);
     B(Grayscale <br> images) --> C(illumination <br> correction);
     C(illumination <br> correction) --> D("focus  stacking <br>(SIFT)");
-    D("focus stacking <br>(SIFT)") --> E("background and noise <br> subtraction (WBNS)");
+    D("focus stacking <br>(SIFT)") --> E("background and noise <br> subtraction (WBNS)")
     click C "#illumination-correction"
     click D "#focus-stacking"
     click E "#background-and-noise-subtraction"  
 ```  
 <br>  
 
-Here are the details of these steps:
+Here are the details of these steps: ^s^
 
 
 #### Illumination correction 
@@ -75,7 +75,7 @@ We proceeded to identify the cytoskeleton shape using Canny edge detection and H
 ![](./static/figures/canny_hough_3.png)
 
 ### Approach_II
-We found it difficalt to identify cytoskeleton signals in cell images generated from Epi-fluorescence micropscopy. We switched to use spinning-disk confocal microscopy for it can eliminate the out-of-focus glare. Also, we found another way to select cell of interest by using Cellpose[^[3]^](#3), and quntify the cytoskeleton orientation through fourier transform[^[4]^](#4).
+We found it difficalt to identify cytoskeleton signals in cell images generated from Epi-fluorescence micropscopy. We switched to use spinning-disk confocal microscopy for it can eliminate the out-of-focus glare. Also, we found another way to select cell of interest by using Cellpose[[3]](#3), and quntify the cytoskeleton orientation through fourier transform[[4]](#4).
 <br>
 ```mermaid
 graph LR;
