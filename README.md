@@ -43,7 +43,7 @@ t_array= (t_array-c_off)/c_ref[channel[i]]*c_mean[channel[i]]
 #### Focus stacking
 Due to variation of focus of images within z-stack of one view as shown in figure below.
 
-![](./static/figures/focus_plane.png)
+![](./static/figures/focus_plane.png)  
 
 We apply the focus_stack function to each view of images to merge all focuses into one image.
 
@@ -64,7 +64,7 @@ def focus_stack(self, image_files: List[np.ndarray]) -> np.ndarray:
 ### Background and noise subtraction
 Following the focus_stack, we use WBNS to reduce background and noise signals. 
 
-![](./static/figures/wbns.png)
+![](./static/figures/wbns.png)  
 <br>
 We proceeded to identify the cytoskeleton shape using Canny edge detection and Hough transform algorithm. But, it failed to get the specific and accurate lines.
 <br>
@@ -120,10 +120,10 @@ Throughout this project, we extensively read lots of references and explored dif
 
 ### References 
 
-<a id="1">[1]</a> Lowe, D.G. Distinctive Image Features from Scale-Invariant Keypoints. International Journal of Computer Vision 60, 91–110 (2004). [Github repo](https://github.com/momonala/focus-stack/blob/master/focus_stack/focus_stack.py)
-<a id="2">[2]</a> Hüpfel M, Yu Kobitski A, Zhang W, Nienhaus GU. Wavelet-based background and noise subtraction for fluorescence microscopy images. Biomed Opt Express. 2021;12(2):969-980. [Github repo](https://github.com/NienhausLabKIT/HuepfelM/blob/master/WBNS/python_script/WBNS.py)
-<a id="3">[3]</a> Stringer C, Wang T, Michaelos M, Pachitariu M. Cellpose: a generalist algorithm for cellular segmentation. Nat Methods. 2021;18(1):100-106. [Github repo](https://github.com/MouseLand/cellpose)
-<a id="4">[4]</a> Marcotti S, de Freitas DB, Troughton LD, et al. A workflow for rapid unbiased quantification of fibrillar feature alignment in biological images. Front Comput Sci. 2021;3:745831. [Github repo](https://github.com/OakesLab/AFT-Alignment_by_Fourier_Transform/tree/master/Python_implementation)
+<a id="1">[1]</a> Lowe, D.G. Distinctive Image Features from Scale-Invariant Keypoints. International Journal of Computer Vision 60, 91–110 (2004). [Github repo](https://github.com/momonala/focus-stack/blob/master/focus_stack/focus_stack.py)  
+<a id="2">[2]</a> Hüpfel M, Yu Kobitski A, Zhang W, Nienhaus GU. Wavelet-based background and noise subtraction for fluorescence microscopy images. Biomed Opt Express. 2021;12(2):969-980. [Github repo](https://github.com/NienhausLabKIT/HuepfelM/blob/master/WBNS/python_script/WBNS.py)  
+<a id="3">[3]</a> Stringer C, Wang T, Michaelos M, Pachitariu M. Cellpose: a generalist algorithm for cellular segmentation. Nat Methods. 2021;18(1):100-106. [Github repo](https://github.com/MouseLand/cellpose)  
+<a id="4">[4]</a> Marcotti S, de Freitas DB, Troughton LD, et al. A workflow for rapid unbiased quantification of fibrillar feature alignment in biological images. Front Comput Sci. 2021;3:745831. [Github repo](https://github.com/OakesLab/AFT-Alignment_by_Fourier_Transform/tree/master/Python_implementation)  
 
 <!-- git-repo
 WBNS: https://github.com/NienhausLabKIT/HuepfelM/blob/master/WBNS/python_script/WBNS.py -->
