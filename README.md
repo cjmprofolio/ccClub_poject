@@ -80,7 +80,7 @@ graph LR;
     A(Confocal <br> fluorescence) -->|Get| B(Grayscale <br> images);
     B(Grayscale <br> images) --> C(fmeasure);
     C(focus <br> measure) --> D("Cell selection <br> (Cellpose)");
-    D("Cell selection <br> (Cellpose)") --> E("Quantification of <br> fibrillar feature (AFT)")
+    D("Cells selection <br> (Cellpose)") --> E("Quantification of <br> fibrillar feature (AFT)")
     click C "#focus-measure"
     click D "#cells-selection"
     click E "#quantification-of-fibrillar-feature"
