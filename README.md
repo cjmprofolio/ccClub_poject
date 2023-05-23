@@ -59,7 +59,7 @@ def focus_stack(self, image_files: List[np.ndarray]) -> np.ndarray:
         return focus_stacked
 ```
 <br>
-### Background and noise subtraction
+### Background and noise subtraction  
 Following the focus_stack, we use WBNS to reduce background and noise signals. 
 
 ![](./static/figures/wbns.png)  
