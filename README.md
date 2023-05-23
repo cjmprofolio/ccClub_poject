@@ -15,16 +15,19 @@ graph LR;
     D("focus stacking <br>(SIFT)") --> E("background and noise <br> subtraction (WBNS)");
     click C "#illumination-correction"
     click D "#focus-stacking"
-    click E "#background-and-noise-subtraction"
+    click E "#background-and-noise-subtraction"  
 ```  
 <br>
+
 Here are the details of these steps:
-<br>
+
+
 #### Illumination correction 
 For setting up the fluorescence background for each channel, we subtract fluro-off (c_off) from  9 fluro-on views to get the reference (c_ref) and mean (c_mean) background fluorescence values. Then, normalize each image using following calculation.
 ```math
 img_{out}= \frac{img_{in}-c_{off}}{c_{ref}} \times c_{mean}
 ```
+
 We obtained the images with fluorescence background from microscopy. As a first step, we will subtracting the fluorescence background from images, as shown in figure below.  
 
 ```python
