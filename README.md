@@ -6,20 +6,18 @@ I teamed up with my senior colleagues in PhD programs from graduate school I stu
 ### Approach_I
 Initailly, we utilized cell images from epi microscopy cell images. Prior to proceeding the cytoskeleton processing, we would like to address the issues of the background and noises of images. We accomplished it by serial processes including correcting by subtracting fluorescence-background, stacking z-scale through scale-invariant feature transform (SIFT)[[1]](#1) and doing Wavelet-based background and noise subtraction (WBNS)[[2]](#2).  
 
-<br>  
-```mermaid  
+```mermaid
 graph LR;
     A(Epi <br> fluorescence) -->|Get| B(Grayscale <br> images);
     B(Grayscale <br> images) --> C(illumination <br> correction);
-    C(illumination <br> correction) --> D("focus  stacking <br>(SIFT)");
+    C(illumination <br> correction) --> D("focus stacking <br>(SIFT)");
     D("focus stacking <br>(SIFT)") --> E("background and noise <br> subtraction (WBNS)")
     click C "#illumination-correction"
     click D "#focus-stacking"
-    click E "#background-and-noise-subtraction"  
+    click E "#background-and-noise-subtraction"
 ```  
-<br>  
 
-Here are the details of these steps: ^s^
+Here are the details of these steps: 
 
 
 #### Illumination correction 
